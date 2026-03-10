@@ -1,5 +1,5 @@
 name: Build Android APK
-on:
+on: 
   workflow_dispatch:
 
 jobs:
@@ -8,15 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get Date
-        id: get-date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-
       - name: Build with Buildozer
-        uses: GearSlayer/Kivy-Android-Action@v2.1
+        uses: Niklas-dev/buildozer-action@v1.5
         with:
-          buildozer_config: buildozer.spec
           command: buildozer android debug
+          buildozer_version: master
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
