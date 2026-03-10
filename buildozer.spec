@@ -103,8 +103,9 @@ android.permissions = INTERNET
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-
 android.api = 34
+android.minapi = 21
+android.ndk = 25b
 android.build_tools_version = 34.0.0
 android.accept_sdk_license = True
 
