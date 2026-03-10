@@ -113,8 +113,7 @@ android.accept_sdk_license = True
 
 android.release_artifact: aab
 
-# (int) Minimum API your APK / AAB will support.
-android.minapi = 21
+
 
 # (int) Android SDK version to use
 #android.sdk = 20
